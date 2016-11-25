@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app2="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_calcu1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="edu.upc.eet.pma.calcuinercias.Calcu1Activity">
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="28dp"
+        android:columnCount="2"
+        android:rowCount="3"
+        android:layout_marginRight="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_rowWeight="1">
+
+        <ImageButton
+            android:text="Button"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:id="@+id/button6"
+            android:layout_marginRight="25dp"
+            android:layout_marginBottom="25dp"
+            style="@style/Widget.AppCompat.ImageButton"
+            app2:srcCompat="@mipmap/cilindre"
+            android:scaleType="fitCenter"
+            android:elevation="0dp"
+            android:layout_rowWeight="2"
+            />
+
+        <ImageButton
+            android:text="Button"
+            android:layout_width="125dp"
+            android:layout_height="129dp"
+            android:id="@+id/button5"
+            app2:srcCompat="@mipmap/esfera"
+            android:scaleType="fitCenter"
+            android:layout_rowWeight="2"
+            />
+
+        <ImageButton
+            android:text="Button"
+            android:layout_width="125dp"
+            android:layout_height="129dp"
+            android:id="@+id/button4"
+            android:layout_marginBottom="25dp"
+            app2:srcCompat="@mipmap/esfera"
+            android:scaleType="fitCenter"
+            android:layout_rowWeight="2"
+            />
+
+        <ImageButton
+            android:text="Button"
+            android:layout_width="125dp"
+            android:layout_height="129dp"
+            app2:srcCompat="@mipmap/esfera"
+            android:scaleType="fitCenter"
+            android:layout_rowWeight="2"
+            />
+
+        <ImageButton
+            android:text="Button"
+            android:id="@+id/button2"
+            android:layout_width="125dp"
+            android:layout_height="129dp"
+            app2:srcCompat="@mipmap/esfera"
+            android:scaleType="fitCenter"
+
+            />
+
+        <ImageButton
+            android:text="Button"
+            android:id="@+id/button"
+            android:layout_width="125dp"
+            android:layout_height="129dp"
+            app2:srcCompat="@mipmap/esfera"
+            android:scaleType="fitCenter"
+            />
+    </GridLayout>
+
+</RelativeLayout>
