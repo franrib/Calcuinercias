@@ -23,7 +23,7 @@
         android:rowCount="3"
         android:layout_marginRight="40dp"
         android:layout_marginLeft="40dp"
-        android:layout_rowWeight="1">
+        >
 
         <ImageButton
             android:text="Button"
@@ -36,7 +36,8 @@
             app2:srcCompat="@mipmap/cilindre"
             android:scaleType="fitCenter"
             android:elevation="0dp"
-            android:layout_rowWeight="2"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
             />
 
         <ImageButton
@@ -46,7 +47,8 @@
             android:id="@+id/button5"
             app2:srcCompat="@mipmap/esfera"
             android:scaleType="fitCenter"
-            android:layout_rowWeight="2"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
             />
 
         <ImageButton
@@ -57,7 +59,8 @@
             android:layout_marginBottom="25dp"
             app2:srcCompat="@mipmap/esfera"
             android:scaleType="fitCenter"
-            android:layout_rowWeight="2"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
             />
 
         <ImageButton
@@ -66,7 +69,8 @@
             android:layout_height="129dp"
             app2:srcCompat="@mipmap/esfera"
             android:scaleType="fitCenter"
-            android:layout_rowWeight="2"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
             />
 
         <ImageButton
@@ -76,6 +80,8 @@
             android:layout_height="129dp"
             app2:srcCompat="@mipmap/esfera"
             android:scaleType="fitCenter"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
 
             />
 
@@ -86,6 +92,8 @@
             android:layout_height="129dp"
             app2:srcCompat="@mipmap/esfera"
             android:scaleType="fitCenter"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
             />
     </GridLayout>
 
