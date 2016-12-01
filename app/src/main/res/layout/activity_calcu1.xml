@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
 
+
     xmlns:app2="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_calcu1"
@@ -22,75 +23,74 @@
         android:rowCount="3"
         android:layout_marginRight="40dp"
         android:layout_marginLeft="40dp"
-        >
+        android:alignmentMode="alignMargins"
+        android:layout_centerInParent="true">
 
         <ImageButton
             android:text="Button"
             android:layout_width="125dp"
             android:layout_height="125dp"
-            android:id="@+id/button6"
+            android:id="@+id/btn_cil"
             android:layout_marginRight="25dp"
             android:layout_marginBottom="25dp"
-            app2:srcCompat="@mipmap/cilindre"
+            app2:srcCompat="@mipmap/cilinder"
             android:scaleType="fitCenter"
             android:padding="0dp"
-
-            />
+            android:background="#00000000" />
 
         <ImageButton
             android:text="Button"
             android:layout_width="125dp"
             android:layout_height="125dp"
-            android:id="@+id/button5"
-            app2:srcCompat="@mipmap/esfera"
+            android:id="@+id/btn_cil_buit"
+            app2:srcCompat="@mipmap/cil_buit"
             android:scaleType="fitCenter"
             android:padding="0dp"
-
-            />
+            android:background="#00000000" />
 
         <ImageButton
             android:text="Button"
             android:layout_width="125dp"
             android:layout_height="125dp"
-            android:id="@+id/button4"
+            android:id="@+id/btn_con"
             android:layout_marginBottom="25dp"
-            app2:srcCompat="@mipmap/esfera"
+            app2:srcCompat="@mipmap/cono"
             android:scaleType="fitCenter"
             android:padding="0dp"
-
+            android:background="#00000000"
             />
 
         <ImageButton
             android:text="Button"
             android:layout_width="125dp"
             android:layout_height="125dp"
-            app2:srcCompat="@mipmap/esfera"
+            app2:srcCompat="@mipmap/bola"
             android:scaleType="fitCenter"
             android:padding="0dp"
+            android:background="#00000000"
+            android:id="@+id/btn_esfera" />
+
+        <ImageButton
+            android:text="Button"
+            android:id="@+id/btn_basic"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            app2:srcCompat="@mipmap/basic"
+            android:scaleType="fitCenter"
+            android:padding="0dp"
+            android:background="#00000000"
 
             />
 
         <ImageButton
             android:text="Button"
-            android:id="@+id/button2"
+            android:id="@+id/btn_cub"
             android:layout_width="125dp"
             android:layout_height="125dp"
-            app2:srcCompat="@mipmap/esfera"
+            app2:srcCompat="@mipmap/cub"
             android:scaleType="fitCenter"
             android:padding="0dp"
-
-
-            />
-
-        <ImageButton
-            android:text="Button"
-            android:id="@+id/button"
-            android:layout_width="125dp"
-            android:layout_height="125dp"
-            app2:srcCompat="@mipmap/esfera"
-            android:scaleType="fitCenter"
-            android:padding="0dp"
-
+            android:background="#00000000"
             />
     </GridLayout>
 
