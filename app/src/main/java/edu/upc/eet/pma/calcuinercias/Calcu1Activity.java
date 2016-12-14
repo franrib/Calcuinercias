@@ -17,6 +17,10 @@ public class Calcu1Activity extends AppCompatActivity {
         ImageButton btn_cilindre = (ImageButton)findViewById(R.id.btn_cil);
         ImageButton btn_cil_buit = (ImageButton)findViewById(R.id.btn_cil_buit);
         ImageButton btn_basic = (ImageButton)findViewById(R.id.btn_basic);
+        ImageButton btn_con = (ImageButton) findViewById(R.id.btn_con);
+        ImageButton btn_esfera = (ImageButton) findViewById(R.id.btn_esfera);
+        ImageButton btn_cub = (ImageButton) findViewById(R.id.btn_cub);
+
 
 
 
