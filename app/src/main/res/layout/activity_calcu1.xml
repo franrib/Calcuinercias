@@ -17,10 +17,11 @@
         android:layout_rowWeight="1"
         android:layout_gravity="fill"
         android:gravity="center"
-        app2:srcCompat="@mipmap/cilinder"
         android:scaleType="fitCenter"
+        app2:srcCompat="@mipmap/cilinder"
         android:background="#00000000"
-        style="@android:style/Widget.Holo.ImageButton" />
+        style="@android:style/Widget.Holo.ImageButton"
+        android:onClick=""/>
 
     <ImageButton
         android:text="Button"

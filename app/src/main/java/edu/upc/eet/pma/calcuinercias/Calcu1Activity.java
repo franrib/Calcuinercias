@@ -1,11 +1,14 @@
 package edu.upc.eet.pma.calcuinercias;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.AppCompatImageButton;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+
+
 
 public class Calcu1Activity extends AppCompatActivity {
 
@@ -21,7 +24,14 @@ public class Calcu1Activity extends AppCompatActivity {
         ImageButton btn_esfera = (ImageButton) findViewById(R.id.btn_esfera);
         ImageButton btn_cub = (ImageButton) findViewById(R.id.btn_cub);
 
+     btn_cilindre.setOnClickListener(new View.OnClickListener() {
+         @Override
+         public void onClick(View v) {
+             Intent calcular = new Intent(Calcu1Activity.this, CalculatorActivity.class);
+             startActivity(calcular);
 
+         }
+     });
 
 
     }
