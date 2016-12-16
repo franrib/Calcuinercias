@@ -22,7 +22,7 @@
         android:layout_gravity="fill"
         android:gravity="center"
         android:scaleType="fitCenter"
-        android:layout_columnWeight="1"
+
         android:layout_rowWeight="1"
         />
 

@@ -12,6 +12,7 @@ import android.widget.ImageButton;
 
 public class Calcu1Activity extends AppCompatActivity {
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,6 +34,13 @@ public class Calcu1Activity extends AppCompatActivity {
          }
      });
 
+        btn_con.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent calcular = new Intent(Calcu1Activity.this,CalculatorActivity.class);
+                startActivity(calcular);
+            }
+        });
 
     }
 
