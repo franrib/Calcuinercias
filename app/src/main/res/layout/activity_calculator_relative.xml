@@ -30,21 +30,11 @@
         android:id="@+id/resultat"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_toStartOf="@+id/units_amplada"
+        android:layout_toStartOf="@+id/b_unitats_resultat"
         android:textSize="32sp"
         android:textAlignment="textEnd"
         android:gravity="end"
-        android:layout_toLeftOf="@+id/units_amplada" />
-
-    <TextView
-        android:text="Densitat"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/diagrama"
-        android:layout_toRightOf="@+id/diagrama"
-        android:layout_toEndOf="@+id/diagrama"
-        android:layout_marginTop="23dp"
-        android:id="@+id/titol_densitat" />
+        android:layout_toLeftOf="@+id/b_unitats_resultat" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -79,8 +69,8 @@
         android:layout_marginTop="10dp" />
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         app:srcCompat="@mipmap/ic_launcher"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
@@ -91,32 +81,16 @@
         android:text="Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/units_amplada"
-        android:layout_above="@+id/units_altura"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
-
-    <Button
-        android:text="Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/units_altura"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
-
-    <Button
-        android:text="Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:id="@+id/b_unitats_resultat"
         android:layout_alignBottom="@+id/resultat"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:layout_toRightOf="@+id/valor_long"
+        android:layout_toEndOf="@+id/valor_long" />
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         app:srcCompat="@mipmap/ic_launcher"
         android:layout_above="@+id/im_altura"
         android:layout_alignParentLeft="true"
@@ -124,84 +98,115 @@
         android:id="@+id/im_amplada" />
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         app:srcCompat="@mipmap/ic_launcher"
         android:layout_above="@+id/im_amplada"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:id="@+id/im_long" />
 
-    <Button
-        android:text="Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/units_amplada"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:id="@+id/units_long" />
-
     <TextView
-        android:text="TextView"
+        android:text="Longitud"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/im_long"
         android:layout_toRightOf="@+id/im_long"
         android:layout_toEndOf="@+id/im_long"
-        android:id="@+id/titol_long"
-        android:layout_above="@+id/im_amplada" />
+        android:id="@+id/titol_long" />
 
     <TextView
-        android:text="TextView"
+        android:text="Altura"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/im_amplada"
-        android:layout_alignRight="@+id/titol_amplada"
-        android:layout_alignEnd="@+id/titol_amplada"
         android:id="@+id/titol_altura"
-        android:layout_alignParentBottom="true" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:ems="10"
-        android:layout_below="@+id/units_amplada"
-        android:id="@+id/valor_altura"
-        android:layout_toLeftOf="@+id/units_amplada"
-        android:layout_toRightOf="@+id/titol_altura"
-        android:layout_toEndOf="@+id/titol_altura" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:ems="10"
-        android:layout_above="@+id/units_altura"
-        android:layout_toRightOf="@+id/titol_amplada"
-        android:layout_toEndOf="@+id/titol_amplada"
-        android:id="@+id/valor_amplada" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:ems="10"
-        android:layout_above="@+id/units_amplada"
-        android:layout_toRightOf="@+id/titol_long"
-        android:layout_toLeftOf="@id/units_long"
-        android:layout_toEndOf="@+id/titol_long"
-        android:id="@+id/valor_long" />
+        android:layout_toRightOf="@+id/im_altura"
+        android:layout_alignRight="@+id/diagrama"
+        android:layout_alignEnd="@+id/diagrama" />
 
     <TextView
-        android:text="TextView"
+        android:text="Amplada"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/titol_amplada"
         android:layout_below="@+id/im_long"
         android:layout_toRightOf="@+id/im_amplada"
         
+        android:layout_toEndOf="@+id/im_amplada" />
+
+    <Button
+        android:text="Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/units_altura"
+        android:layout_below="@+id/units_amplada"
+        android:layout_toEndOf="@+id/valor_altura"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/units_amplada"
+        android:layout_alignStart="@+id/units_amplada" />
+
+    <TextView
+        android:text="Densitat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/titol_densitat"
+        android:layout_alignTop="@+id/diagrama"
+        android:layout_toRightOf="@+id/diagrama"
+        android:layout_toEndOf="@+id/diagrama" />
+
+    <EditText
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/valor_long"
+        android:layout_below="@+id/titol_long"
+        android:layout_above="@+id/im_amplada"
+        android:layout_toLeftOf="@+id/units_long"
+        android:layout_toRightOf="@+id/im_amplada"
+        android:layout_toEndOf="@+id/im_amplada" />
+
+    <Button
+        android:text="Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/units_long"
+        android:layout_alignTop="@+id/titol_long"
+        android:layout_alignBottom="@+id/valor_long"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/valor_amplada"
+        android:layout_below="@+id/titol_amplada"
+        android:layout_toRightOf="@+id/im_amplada"
         android:layout_toEndOf="@+id/im_amplada"
         android:layout_above="@+id/im_altura" />
+
+    <Button
+        android:text="Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/units_amplada"
+        android:layout_below="@+id/units_long"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignBottom="@+id/valor_amplada" />
+
+    <EditText
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/valor_altura"
+        android:layout_toRightOf="@+id/im_altura"
+        android:layout_toEndOf="@+id/im_altura"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/titol_altura" />
 
 </RelativeLayout>
