@@ -1,17 +1,10 @@
 package edu.upc.eet.pma.calcuinercias;
-
 import android.content.Intent;
-import android.support.v4.view.GestureDetectorCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.GestureDetector;
-import android.view.MotionEvent;
-
+import android.widget.TextView;
 
 public class CalculatorActivity extends AppCompatActivity {
-
-    private GestureDetectorCompat gestureObject;
-
 
 
     @Override
@@ -19,32 +12,21 @@ public class CalculatorActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calculator_relative);
 
+        TextView titol_pagina = (TextView) findViewById(R.id.titol_pagina);
 
-        gestureObject = new GestureDetectorCompat(this, new LearnGesture());
+        //String title = intent.getStringExtra("tit_pag");
 
+        Intent intent=getIntent();
+        Bundle title =intent.getExtras();
 
-
-
-    }
-
-    @Override
-    public boolean onTouchEvent (MotionEvent event){
-        this.gestureObject.onTouchEvent(event);
-        return super.onTouchEvent(event);
-
-    }
-
-    class LearnGesture extends GestureDetector.SimpleOnGestureListener{
-
-    @Override
-
-        public boolean onFling (MotionEvent event1, MotionEvent event2, float velocityX, float velocityY){
-        if (event2.getX() < event1.getX()){
-            Intent enrrere = new Intent(CalculatorActivity.this, Calcu1Activity.class);
-            startActivity(enrrere);
+        if (title != null) {
+            String titol_pag = (String) title.get("tit_pag");
+            titol_pagina.setText(titol_pag);
         }
-        return true;
+
+
+
     }
 
     }
-}
+

@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">Calcuinercias</string>
+    <string name="Mass">mass</string>
+    <string name="Length">length</string>
+    <string name="Height">height</string>
+    <string name="Width">width</string>
+    <string name="Density">density</string>
+
+
+    <array name="all_titles">
+        <item>Cilindre;btn_cilindre</item>
+        <item>Cilindre Buit;btn_cil_buit</item>
+        <item>Cub;btn_cub</item>
+        <item>Con;btn_con</item>
+        <item>Esfera;btn_esfera</item>
+        <item>Simple;btn_basic</item>
+    </array>
+
 </resources>
