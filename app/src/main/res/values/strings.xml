@@ -8,12 +8,12 @@
 
 
     <array name="all_titles">
-        <item>Cilindre;btn_cilindre</item>
-        <item>Cilindre Buit;btn_cil_buit</item>
-        <item>Cub;btn_cub</item>
-        <item>Con;btn_con</item>
-        <item>Esfera;btn_esfera</item>
-        <item>Simple;btn_basic</item>
+        <item>Cilindre</item>
+        <item>Cilindre Buit</item>
+        <item>Con</item>
+        <item>Esfera</item>
+        <item>Simple</item>
+        <item>Cub</item>
     </array>
 
 </resources>

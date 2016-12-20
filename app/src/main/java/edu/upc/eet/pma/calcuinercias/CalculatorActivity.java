@@ -14,19 +14,13 @@ public class CalculatorActivity extends AppCompatActivity {
 
         TextView titol_pagina = (TextView) findViewById(R.id.titol_pagina);
 
-        //String title = intent.getStringExtra("tit_pag");
-
-        Intent intent=getIntent();
-        Bundle title =intent.getExtras();
-
-        if (title != null) {
-            String titol_pag = (String) title.get("tit_pag");
-            titol_pagina.setText(titol_pag);
+        Intent intent = getIntent();
+        if (intent != null) {
+            String titol_pag = intent.getStringExtra("tit_pag");
+            if (titol_pag != null) {
+                titol_pagina.setText(titol_pag);
+            }
         }
-
-
-
     }
-
-    }
+}
 
