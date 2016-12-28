@@ -1,10 +1,10 @@
 <resources>
     <string name="app_name">Calcuinercias</string>
-    <string name="Mass">mass</string>
-    <string name="Length">length</string>
-    <string name="Height">height</string>
-    <string name="Width">width</string>
-    <string name="Density">density</string>
+    <string name="Mass">Mass</string>
+    <string name="Length">Length</string>
+    <string name="Height">Height</string>
+    <string name="Width">Width</string>
+    <string name="Density">Density</string>
 
 
     <array name="all_titles">
