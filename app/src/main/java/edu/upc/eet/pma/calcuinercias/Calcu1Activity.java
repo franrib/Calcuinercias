@@ -7,8 +7,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.Spinner;
 
 public class Calcu1Activity extends AppCompatActivity {
+
 
     // Taula de ids dels botons (l'ordre ha de ser el mateix que el de 'all_titles'!!)
     private final int[] ids_botons = {
@@ -31,6 +33,7 @@ public class Calcu1Activity extends AppCompatActivity {
             ImageButton btn = (ImageButton) findViewById(ids_botons[i]);
             Click_Listener(btn, all_titles[i]);
         }
+
     }
 
     private void Click_Listener(final ImageButton btn, final String titol_pagina) {

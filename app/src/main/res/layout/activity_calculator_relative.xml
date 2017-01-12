@@ -3,6 +3,7 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:columnCount="8"
@@ -11,187 +12,114 @@
     >
 
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:ems="10"
-        android:layout_below="@+id/titol_densitat"
-        android:layout_toRightOf="@+id/diagrama"
-        android:id="@+id/valor_densitat"
-        android:layout_marginTop="10dp" />
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        app:srcCompat="@mipmap/ic_launcher"
+        android:id="@+id/im_long"
+        android:layout_below="@+id/im_amplada"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        app:srcCompat="@mipmap/ic_launcher"
+        android:id="@+id/im_altura"
+        android:layout_below="@+id/im_long"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <TextView
         android:text="@string/Mass"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/valor_densitat"
-        android:layout_toRightOf="@+id/diagrama"
-        android:layout_toEndOf="@+id/diagrama"
         android:id="@+id/titol_massa"
-        android:layout_marginTop="10dp" />
+        android:layout_above="@+id/valor_massa"
+        android:layout_toRightOf="@+id/diagrama"
+        android:layout_toEndOf="@+id/diagrama" />
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        app:srcCompat="@mipmap/ic_launcher"
+        android:id="@+id/im_amplada"
+        android:layout_below="@+id/diagrama"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <EditText
-        android:layout_width="wrap_content"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:inputType="number"
         android:ems="10"
-        android:layout_below="@+id/titol_massa"
-        android:layout_toRightOf="@+id/diagrama"
-        android:id="@+id/valor_massa"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="10dp" />
-
-    <ImageView
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        app:srcCompat="@mipmap/ic_launcher"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:id="@+id/im_altura" />
-
-    <ImageView
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        app:srcCompat="@mipmap/ic_launcher"
-        android:layout_above="@+id/im_altura"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:id="@+id/im_amplada" />
-
-    <ImageView
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        app:srcCompat="@mipmap/ic_launcher"
-        android:layout_above="@+id/im_amplada"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:id="@+id/im_long" />
-
-    <TextView
-        android:text="@string/Length"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/im_long"
-        android:layout_toRightOf="@+id/im_long"
-        android:layout_toEndOf="@+id/im_long"
-        android:id="@+id/titol_long" />
+        android:id="@+id/valor_densitat"
+        android:layout_above="@+id/titol_massa"
+        android:layout_toRightOf="@+id/diagrama" />
 
     <TextView
         android:text="@string/Height"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/im_amplada"
         android:id="@+id/titol_altura"
+        android:layout_above="@+id/valor_altura"
         android:layout_toRightOf="@+id/im_altura"
-        android:layout_alignRight="@+id/diagrama"
-        android:layout_alignEnd="@+id/diagrama" />
+        android:layout_toEndOf="@+id/im_altura" />
 
     <TextView
         android:text="@string/Width"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/titol_amplada"
-        android:layout_below="@+id/im_long"
+
+        android:layout_above="@+id/valor_amplada"
         android:layout_toRightOf="@+id/im_amplada"
-        
         android:layout_toEndOf="@+id/im_amplada" />
 
-    <Button
-        android:text="Button"
+    <TextView
+        android:text="@string/Length"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/units_altura"
-        android:layout_below="@+id/units_amplada"
-        android:layout_toEndOf="@+id/valor_altura"
-        android:layout_toRightOf="@id/valor_altura"
-        android:layout_alignParentBottom="true"
-        android:layout_alignLeft="@+id/units_amplada"
-        android:layout_alignStart="@+id/units_amplada" />
+        android:id="@+id/titol_long"
+        android:layout_above="@+id/valor_long"
+        android:layout_toRightOf="@+id/im_long"
+        android:layout_toEndOf="@+id/im_long" />
 
     <TextView
         android:text="@string/Density"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/titol_densitat"
-        android:layout_alignTop="@+id/diagrama"
+        android:layout_above="@+id/valor_densitat"
         android:layout_toRightOf="@+id/diagrama"
         android:layout_toEndOf="@+id/diagrama" />
-
-    <EditText
-        android:layout_width="170dp"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:ems="10"
-        android:id="@+id/valor_long"
-        android:layout_below="@+id/titol_long"
-        android:layout_above="@+id/im_amplada"
-        android:layout_toLeftOf="@+id/units_long"
-        android:layout_toRightOf="@+id/im_amplada"
-        android:layout_toEndOf="@+id/im_amplada" />
-
-    <Button
-        android:text="Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/units_long"
-        android:layout_alignTop="@+id/titol_long"
-        android:layout_alignBottom="@+id/valor_long"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
-
-    <EditText
-        android:layout_width="170dp"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:ems="10"
-        android:id="@+id/valor_amplada"
-        android:layout_below="@+id/titol_amplada"
-        android:layout_toRightOf="@+id/im_amplada"
-        android:layout_toEndOf="@+id/im_amplada"
-        android:layout_above="@+id/im_altura" />
-
-    <Button
-        android:text="Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/units_amplada"
-        android:layout_below="@+id/units_long"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignBottom="@+id/valor_amplada" />
-
-    <EditText
-        android:layout_width="170dp"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:ems="10"
-        android:id="@+id/valor_altura"
-        android:layout_toRightOf="@+id/im_altura"
-        android:layout_toEndOf="@+id/im_altura"
-        android:layout_alignParentBottom="true"
-        android:layout_below="@+id/titol_altura" />
 
     <ImageView
         android:layout_width="150dp"
         app:srcCompat="@mipmap/cub"
         android:id="@+id/diagrama"
         android:layout_height="150dp"
-        android:layout_above="@+id/im_long"
+        android:layout_below="@+id/resultat"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="11dp" />
+        android:layout_alignParentStart="true" />
 
-    <Button
-        android:text="Button"
-        android:layout_width="wrap_content"
+    <EditText
         android:layout_height="wrap_content"
-        android:id="@+id/b_unitats_resultat"
-        android:layout_alignBottom="@+id/resultat"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/valor_long"
+        android:layout_above="@+id/im_altura"
+        android:layout_toRightOf="@+id/im_long"
+        android:layout_width="220dp" />
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner_resultat"
+        android:layout_above="@+id/diagrama"
+        android:layout_toRightOf="@+id/resultat"
+        android:layout_toEndOf="@+id/resultat"
+        android:layout_alignTop="@+id/resultat" />
 
     <TextView
         android:text="Cilindre buit"
@@ -199,12 +127,28 @@
         android:layout_height="wrap_content"
         android:id="@+id/titol_pagina"
         android:textStyle="normal|bold"
+        android:textSize="24sp"
+        android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:textSize="24sp" />
+        android:layout_alignParentStart="true" />
+
+    <Spinner
+        android:layout_height="40dp"
+        android:id="@+id/spinner_ref2"
+        android:layout_alignBottom="@+id/valor_long"
+        android:layout_toRightOf="@+id/valor_long"
+        android:layout_toEndOf="@+id/valor_long"
+        android:layout_width="90dp" />
+
+    <Spinner
+        android:layout_height="40dp"
+        android:id="@+id/spinner_ref1"
+        android:layout_alignBottom="@+id/valor_amplada"
+        android:layout_toRightOf="@+id/valor_amplada"
+        android:layout_toEndOf="@+id/valor_amplada"
+        android:layout_width="90dp" />
 
     <EditText
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:text="0"
@@ -213,10 +157,63 @@
         android:textSize="32sp"
         android:textAlignment="textEnd"
         android:gravity="end"
+        android:layout_width="290dp"
         android:layout_below="@+id/titol_pagina"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_toLeftOf="@+id/b_unitats_resultat"
-        android:layout_toStartOf="@+id/b_unitats_resultat" />
+        android:layout_alignParentStart="true" />
+
+    <Spinner
+        android:layout_height="40dp"
+        android:id="@+id/spinner_massa"
+        android:layout_width="90dp"
+        android:layout_alignBottom="@+id/valor_massa"
+        android:layout_toRightOf="@+id/valor_massa"
+        android:layout_toEndOf="@+id/valor_massa" />
+
+    <Spinner
+        android:layout_height="40dp"
+        android:id="@+id/spinner_densitat"
+        android:layout_width="90dp"
+        android:layout_alignBottom="@+id/valor_densitat"
+        android:layout_toRightOf="@+id/valor_densitat"
+        android:layout_toEndOf="@+id/valor_densitat" />
+
+    <EditText
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/valor_massa"
+        android:layout_width="150dp"
+        android:layout_alignBottom="@+id/diagrama"
+        android:layout_toRightOf="@+id/diagrama"
+        android:layout_toEndOf="@+id/diagrama" />
+
+    <EditText
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/valor_amplada"
+        android:layout_above="@+id/im_long"
+        android:layout_toRightOf="@+id/im_long"
+        android:layout_toEndOf="@+id/im_long"
+        android:layout_width="220dp" />
+
+    <Spinner
+        android:layout_height="40dp"
+        android:id="@+id/spinner_ref3"
+        android:layout_alignBottom="@+id/valor_altura"
+        android:layout_toRightOf="@+id/valor_altura"
+        android:layout_toEndOf="@+id/valor_altura"
+        android:layout_width="90dp" />
+
+    <EditText
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/valor_altura"
+        android:layout_alignBottom="@+id/im_altura"
+        android:layout_toRightOf="@+id/im_altura"
+        android:layout_toEndOf="@+id/im_altura"
+        android:layout_width="220dp" />
 
 </RelativeLayout>
