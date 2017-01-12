@@ -16,17 +16,8 @@
         android:layout_width="80dp"
         android:layout_height="80dp"
         app:srcCompat="@mipmap/ic_launcher"
-        android:id="@+id/im_long"
-        android:layout_below="@+id/im_amplada"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <ImageView
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        app:srcCompat="@mipmap/ic_launcher"
-        android:id="@+id/im_altura"
-        android:layout_below="@+id/im_long"
+        android:id="@+id/im_ref2"
+        android:layout_below="@+id/im_ref1"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
@@ -43,7 +34,7 @@
         android:layout_width="80dp"
         android:layout_height="80dp"
         app:srcCompat="@mipmap/ic_launcher"
-        android:id="@+id/im_amplada"
+        android:id="@+id/im_ref1"
         android:layout_below="@+id/diagrama"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
@@ -61,29 +52,29 @@
         android:text="@string/Height"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/titol_altura"
-        android:layout_above="@+id/valor_altura"
-        android:layout_toRightOf="@+id/im_altura"
-        android:layout_toEndOf="@+id/im_altura" />
+        android:id="@+id/titol_ref3"
+        android:layout_above="@+id/valor_ref3"
+        android:layout_toRightOf="@+id/im_ref3"
+        android:layout_toEndOf="@+id/im_ref3" />
 
     <TextView
         android:text="@string/Width"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/titol_amplada"
+        android:id="@+id/titol_ref1"
 
-        android:layout_above="@+id/valor_amplada"
-        android:layout_toRightOf="@+id/im_amplada"
-        android:layout_toEndOf="@+id/im_amplada" />
+        android:layout_above="@+id/valor_ref1"
+        android:layout_toRightOf="@+id/im_ref1"
+        android:layout_toEndOf="@+id/im_ref1" />
 
     <TextView
         android:text="@string/Length"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/titol_long"
-        android:layout_above="@+id/valor_long"
-        android:layout_toRightOf="@+id/im_long"
-        android:layout_toEndOf="@+id/im_long" />
+        android:id="@+id/titol_ref2"
+        android:layout_above="@+id/valor_ref2"
+        android:layout_toRightOf="@+id/im_ref2"
+        android:layout_toEndOf="@+id/im_ref2" />
 
     <TextView
         android:text="@string/Density"
@@ -107,9 +98,9 @@
         android:layout_height="wrap_content"
         android:inputType="number"
         android:ems="10"
-        android:id="@+id/valor_long"
-        android:layout_above="@+id/im_altura"
-        android:layout_toRightOf="@+id/im_long"
+        android:id="@+id/valor_ref2"
+        android:layout_above="@+id/im_ref3"
+        android:layout_toRightOf="@+id/im_ref2"
         android:layout_width="220dp" />
 
     <Spinner
@@ -135,17 +126,17 @@
     <Spinner
         android:layout_height="40dp"
         android:id="@+id/spinner_ref2"
-        android:layout_alignBottom="@+id/valor_long"
-        android:layout_toRightOf="@+id/valor_long"
-        android:layout_toEndOf="@+id/valor_long"
+        android:layout_alignBottom="@+id/valor_ref2"
+        android:layout_toRightOf="@+id/valor_ref2"
+        android:layout_toEndOf="@+id/valor_ref2"
         android:layout_width="90dp" />
 
     <Spinner
         android:layout_height="40dp"
         android:id="@+id/spinner_ref1"
-        android:layout_alignBottom="@+id/valor_amplada"
-        android:layout_toRightOf="@+id/valor_amplada"
-        android:layout_toEndOf="@+id/valor_amplada"
+        android:layout_alignBottom="@+id/valor_ref1"
+        android:layout_toRightOf="@+id/valor_ref1"
+        android:layout_toEndOf="@+id/valor_ref1"
         android:layout_width="90dp" />
 
     <EditText
@@ -188,32 +179,52 @@
         android:layout_toRightOf="@+id/diagrama"
         android:layout_toEndOf="@+id/diagrama" />
 
-    <EditText
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:ems="10"
-        android:id="@+id/valor_amplada"
-        android:layout_above="@+id/im_long"
-        android:layout_toRightOf="@+id/im_long"
-        android:layout_toEndOf="@+id/im_long"
-        android:layout_width="220dp" />
-
     <Spinner
         android:layout_height="40dp"
         android:id="@+id/spinner_ref3"
-        android:layout_alignBottom="@+id/valor_altura"
-        android:layout_toRightOf="@+id/valor_altura"
-        android:layout_toEndOf="@+id/valor_altura"
+        android:layout_alignBottom="@+id/valor_ref3"
+        android:layout_toRightOf="@+id/valor_ref3"
+        android:layout_toEndOf="@+id/valor_ref3"
         android:layout_width="90dp" />
 
     <EditText
         android:layout_height="wrap_content"
         android:inputType="number"
         android:ems="10"
-        android:id="@+id/valor_altura"
-        android:layout_alignBottom="@+id/im_altura"
-        android:layout_toRightOf="@+id/im_altura"
-        android:layout_toEndOf="@+id/im_altura"
+        android:id="@+id/valor_ref3"
+        android:layout_alignBottom="@+id/im_ref3"
+        android:layout_toRightOf="@+id/im_ref3"
+        android:layout_toEndOf="@+id/im_ref3"
         android:layout_width="220dp" />
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        app:srcCompat="@mipmap/ic_launcher"
+        android:id="@+id/im_ref3"
+        android:layout_below="@+id/im_ref2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/valor_ref1"
+        android:layout_width="220dp"
+        android:layout_above="@+id/im_ref2"
+        android:layout_toRightOf="@+id/im_ref2"
+        android:layout_toEndOf="@+id/im_ref2" />
+
+    <Button
+        android:text="CALCULA!!"
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/valor_ref3"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/btn_solve"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_height="90dp" />
 
 </RelativeLayout>
