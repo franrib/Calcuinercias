@@ -62,10 +62,6 @@ public class CalculatorActivity extends AppCompatActivity {
                 String sinercia=String.format("%f",inercia);
                 resultat.setText(sinercia);
 
-                float
-
-
-
             }
         });
 
