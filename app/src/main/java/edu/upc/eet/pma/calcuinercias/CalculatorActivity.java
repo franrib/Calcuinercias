@@ -69,23 +69,28 @@ public class CalculatorActivity extends AppCompatActivity {
 
                     switch (calcul){
                         case 0:
-                         if (densi > 0){
+                            if (densi > 0){
                             float inercia = calculaInerciaCubdens();
                             String sinercia = String.format("%f",inercia);
                             resultat.setText(sinercia);
-                         }
-                         if (mass > 0){
+                            }
+                            if (mass > 0){
                              float inercia = calculaInerciaCubMassa();
                              String sinercia = String.format("%f",inercia);
                              resultat.setText(sinercia);
-                         }
+                            }
                         break;
+
+
+
+
 
 
 
                     }
                 } catch (NumberFormatException e) {
                     Log.e("calcuinercia", "Error en algun float.");
+                    resultat.setText("ERROR");
                 }
             }
         });

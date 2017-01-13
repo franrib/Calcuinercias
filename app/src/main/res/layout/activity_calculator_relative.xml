@@ -47,7 +47,8 @@
         android:id="@+id/valor_densitat"
         android:layout_above="@+id/titol_massa"
         android:layout_toRightOf="@+id/diagrama"
-        android:selectAllOnFocus="true"/>
+        android:selectAllOnFocus="true"
+        android:text="0" />
 
     <TextView
         android:text="@string/Height"
@@ -94,7 +95,8 @@
         android:layout_above="@+id/im_ref3"
         android:layout_toRightOf="@+id/im_ref2"
         android:layout_width="220dp"
-        android:selectAllOnFocus="true"/>
+        android:selectAllOnFocus="true"
+        android:text="0" />
 
     <Spinner
         android:layout_width="match_parent"
@@ -163,7 +165,8 @@
         android:layout_alignBottom="@+id/diagrama"
         android:layout_toRightOf="@+id/diagrama"
         android:layout_toEndOf="@+id/diagrama"
-        android:selectAllOnFocus="true"/>
+        android:selectAllOnFocus="true"
+        android:text="0" />
 
     <Spinner
         android:layout_height="40dp"
@@ -182,7 +185,8 @@
         android:layout_toRightOf="@+id/im_ref3"
         android:layout_toEndOf="@+id/im_ref3"
         android:layout_width="220dp"
-        android:selectAllOnFocus="true"/>
+        android:selectAllOnFocus="true"
+        android:text="0" />
 
     <ImageView
         android:layout_width="80dp"
@@ -192,17 +196,6 @@
         android:layout_below="@+id/im_ref2"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
-
-    <EditText
-        android:layout_height="wrap_content"
-        android:inputType="numberDecimal"
-        android:ems="10"
-        android:id="@+id/valor_ref1"
-        android:layout_width="220dp"
-        android:layout_above="@+id/im_ref2"
-        android:layout_toRightOf="@+id/im_ref2"
-        android:layout_toEndOf="@+id/im_ref2"
-        android:selectAllOnFocus="true"/>
 
     <Button
         android:text="CALCULA!!"
@@ -231,5 +224,17 @@
         android:layout_below="@+id/resultat"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/valor_ref1"
+        android:layout_width="220dp"
+        android:selectAllOnFocus="true"
+        android:layout_above="@+id/im_ref2"
+        android:layout_toRightOf="@+id/im_ref2"
+        android:layout_toEndOf="@+id/im_ref2"
+        android:text="0" />
 
 </RelativeLayout>
