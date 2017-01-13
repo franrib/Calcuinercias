@@ -31,17 +31,18 @@ public class Calcu1Activity extends AppCompatActivity {
 
         for (int i = 0; i < ids_botons.length; i++) {
             ImageButton btn = (ImageButton) findViewById(ids_botons[i]);
-            Click_Listener(btn, all_titles[i]);
+            Click_Listener(btn, i, all_titles[i]);
         }
 
     }
 
-    private void Click_Listener(final ImageButton btn, final String titol_pagina) {
+    private void Click_Listener(final ImageButton btn, final int index, final String titol_pagina) {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent calcular = new Intent (Calcu1Activity.this, CalculatorActivity.class);
                 calcular.putExtra("tit_pag", titol_pagina);
+                calcular.putExtra("calcul", index);
                 startActivity(calcular);
             }
         });

@@ -42,7 +42,7 @@
     <EditText
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:inputType="number"
+        android:inputType="numberDecimal"
         android:ems="10"
         android:id="@+id/valor_densitat"
         android:layout_above="@+id/titol_massa"
@@ -85,18 +85,9 @@
         android:layout_toRightOf="@+id/diagrama"
         android:layout_toEndOf="@+id/diagrama" />
 
-    <ImageView
-        android:layout_width="150dp"
-        app:srcCompat="@mipmap/cub"
-        android:id="@+id/diagrama"
-        android:layout_height="150dp"
-        android:layout_below="@+id/resultat"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
     <EditText
         android:layout_height="wrap_content"
-        android:inputType="number"
+        android:inputType="numberDecimal"
         android:ems="10"
         android:id="@+id/valor_ref2"
         android:layout_above="@+id/im_ref3"
@@ -161,17 +152,9 @@
         android:layout_toRightOf="@+id/valor_massa"
         android:layout_toEndOf="@+id/valor_massa" />
 
-    <Spinner
-        android:layout_height="40dp"
-        android:id="@+id/spinner_densitat"
-        android:layout_width="90dp"
-        android:layout_alignBottom="@+id/valor_densitat"
-        android:layout_toRightOf="@+id/valor_densitat"
-        android:layout_toEndOf="@+id/valor_densitat" />
-
     <EditText
         android:layout_height="wrap_content"
-        android:inputType="number"
+        android:inputType="numberDecimal"
         android:ems="10"
         android:id="@+id/valor_massa"
         android:layout_width="150dp"
@@ -189,7 +172,7 @@
 
     <EditText
         android:layout_height="wrap_content"
-        android:inputType="number"
+        android:inputType="numberDecimal"
         android:ems="10"
         android:id="@+id/valor_ref3"
         android:layout_alignBottom="@+id/im_ref3"
@@ -208,7 +191,7 @@
 
     <EditText
         android:layout_height="wrap_content"
-        android:inputType="number"
+        android:inputType="numberDecimal"
         android:ems="10"
         android:id="@+id/valor_ref1"
         android:layout_width="220dp"
@@ -226,5 +209,22 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:layout_height="90dp" />
+
+    <Spinner
+        android:layout_height="40dp"
+        android:id="@+id/spinner_densitat"
+        android:layout_width="90dp"
+        android:layout_alignBottom="@+id/valor_densitat"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <ImageView
+        android:layout_width="150dp"
+        app:srcCompat="@mipmap/cono"
+        android:id="@+id/diagrama"
+        android:layout_height="150dp"
+        android:layout_below="@+id/resultat"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>
