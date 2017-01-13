@@ -27,6 +27,8 @@ public class CalculatorActivity extends AppCompatActivity {
     private EditText edit_ref2;
     private EditText edit_ref3;
     private EditText resultat;
+    private EditText edit_ref1;
+    private EditText edit_densitat;
 
 
     @Override
@@ -48,18 +50,27 @@ public class CalculatorActivity extends AppCompatActivity {
         }
 
         Button button = (Button)findViewById(R.id.btn_solve);
-        //final EditText valor_densitat =(EditText)findViewById(R.id.valor_densitat);
+        edit_densitat =(EditText)findViewById(R.id.valor_densitat);
         edit_massa = (EditText)findViewById(R.id.valor_massa);
-        //final EditText valor_ref1=(EditText)findViewById(R.id.valor_ref1);
+        edit_ref1 =(EditText)findViewById(R.id.valor_ref1);
         edit_ref2 = (EditText)findViewById(R.id.valor_ref2);
         edit_ref3 = (EditText)findViewById(R.id.valor_ref3);
         resultat = (EditText)findViewById(R.id.resultat);
+        //final float densi = edit_densitat;
+
 
 
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+               // switch (calcul){
+                   // case 0:
+                     //   if (densi > 0){
+
+                       // }
+
+               // }
                 float inercia = calculaInerciaCubMassa();
                 String sinercia = String.format("%f",inercia);
                 resultat.setText(sinercia);
