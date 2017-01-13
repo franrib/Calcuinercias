@@ -120,6 +120,110 @@ public class CalculatorActivity extends AppCompatActivity {
         unitats_referencia3.setAdapter(adapter3);
     }
 
+
+
+
+
+    //METODES DE CALCUL
+    private float calculaInerciaCilindremassa() {
+        String smassa = edit_massa.getText().toString();
+        float massa = Float.parseFloat(smassa);
+        String sref1 = edit_ref1.getText().toString();
+        float ref1= Float.parseFloat(sref1);
+
+        return (massa*((ref1/2f)*(ref1/2f)))/2;
+    }
+    private float calculaInerciaCilindredens() {
+        String sdensitat = edit_densitat.getText().toString();
+        float densitat= Float.parseFloat(sdensitat);
+        String sref1 = edit_ref1.getText().toString();
+        float ref1= Float.parseFloat(sref1);
+        String sref2 = edit_ref2.getText().toString();
+        float ref2 = Float.parseFloat(sref2);
+
+        return (3.1416f*densitat*ref2*((ref1/2f)*(ref1/2f)*(ref1/2f)*(ref1/2f)))/2f;
+    }
+
+    private float calculaInerciaCilindrebuitmassa() {
+        String smassa = edit_massa.getText().toString();
+        float massa = Float.parseFloat(smassa);
+        String sref1 = edit_ref1.getText().toString();
+        float ref1= Float.parseFloat(sref1);
+        String sref2 = edit_ref2.getText().toString();
+        float ref2 = Float.parseFloat(sref2);
+
+        return (massa*(((ref1/2f)*(ref1/2f))+(((ref2/2f)*(ref2/2f)))))/2f;
+
+    }
+    private float calculaInerciaCilindrebuitdens() {
+        String sdensitat = edit_densitat.getText().toString();
+        float densitat= Float.parseFloat(sdensitat);
+        String sref1 = edit_ref1.getText().toString();
+        float ref1= Float.parseFloat(sref1);
+        String sref2 = edit_ref2.getText().toString();
+        float ref2 = Float.parseFloat(sref2);
+        String sref3 = edit_ref3.getText().toString();
+        float ref3 = Float.parseFloat(sref3);
+
+        return ((3.1416f*densitat*ref3)/2)*(((ref1/2f)*(ref1/2f)*(ref1/2f)*(ref1/2f))-((ref2/2f)*(ref2/2f)*(ref2/2f)*(ref2/2f)));
+
+    }
+
+    private float calculaInerciaConmassa() {
+        String sdensitat = edit_densitat.getText().toString();
+        float densitat= Float.parseFloat(sdensitat);
+        String smassa = edit_massa.getText().toString();
+        float massa = Float.parseFloat(smassa);
+        String sref1 = edit_ref1.getText().toString();
+        float ref1= Float.parseFloat(sref1);
+        String sref2 = edit_ref2.getText().toString();
+        float ref2 = Float.parseFloat(sref2);
+        String sref3 = edit_ref3.getText().toString();
+        float ref3 = Float.parseFloat(sref3);
+
+        return (3f*massa*((ref1/2)*(ref1/2)))/10;
+    }
+    private float calculaInerciaCondens(){
+        String sdensitat = edit_densitat.getText().toString();
+        float densitat= Float.parseFloat(sdensitat);
+        String sref1 = edit_ref1.getText().toString();
+        float ref1= Float.parseFloat(sref1);
+        String sref2 = edit_ref2.getText().toString();
+        float ref2 = Float.parseFloat(sref2);
+        float massa = ((3.1416f*(ref1*ref1)*ref2)/12)*densitat;
+
+        return (3f*massa*((ref1/2)*(ref1/2)))/10;
+    }
+
+    private float calculaInerciaEsferamassa() {
+        String smassa = edit_massa.getText().toString();
+        float massa = Float.parseFloat(smassa);
+        String sref1 = edit_ref1.getText().toString();
+        float ref1= Float.parseFloat(sref1);
+
+        return ((2/5)*massa*((ref1/2f)*(ref1/2)));
+    }
+    private float calculaInerciaEsferadens() {
+        String sdensitat = edit_densitat.getText().toString();
+        float densitat= Float.parseFloat(sdensitat);
+        String sref1 = edit_ref1.getText().toString();
+        float ref1= Float.parseFloat(sref1);
+        float massa = (3.146f*((ref1/2)*(ref1/2)*(ref1/2)))*densitat;
+
+        return ((2/5)*massa*((ref1/2f)*(ref1/2)));
+
+    }
+
+    private float calculaInerciaBasicmassa() {
+        String smassa = edit_massa.getText().toString();
+        float massa = Float.parseFloat(smassa);
+        String sref1 = edit_ref1.getText().toString();
+        float ref1= Float.parseFloat(sref1);
+
+        return (massa*ref1);
+
+    }
+
     private float calculaInerciaCubMassa() {
         String smassa = edit_massa.getText().toString();
         String sref2 = edit_ref2.getText().toString();
@@ -129,7 +233,6 @@ public class CalculatorActivity extends AppCompatActivity {
         float ref3 = Float.parseFloat(sref3);
         return (massa*((ref2*ref2)+(ref3*ref3)))/12000000;
     }
-
     private float calculaInerciaCubdens(){
         String sdensitat = edit_densitat.getText().toString();
         float densitat= Float.parseFloat(sdensitat);
