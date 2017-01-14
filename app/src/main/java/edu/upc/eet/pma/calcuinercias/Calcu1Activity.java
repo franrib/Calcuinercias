@@ -32,6 +32,8 @@ public class Calcu1Activity extends AppCompatActivity {
         for (int i = 0; i < ids_botons.length; i++) {
             ImageButton btn = (ImageButton) findViewById(ids_botons[i]);
             Click_Listener(btn, i, all_titles[i]);
+            ;
+
         }
 
     }
