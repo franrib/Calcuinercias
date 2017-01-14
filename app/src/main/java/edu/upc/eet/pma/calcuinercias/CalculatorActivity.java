@@ -189,158 +189,208 @@ public class CalculatorActivity extends AppCompatActivity {
     //METODES DE CALCUL
     private float calculaInerciaCilindremassa() {
         String smassa = edit_massa.getText().toString();
-        float massa = Float.parseFloat(smassa);
+        float massa = Float.parseFloat(smassa)*unimassa();
         String sref1 = edit_ref1.getText().toString();
-        float ref1 = Float.parseFloat(sref1);
+        float ref1 = Float.parseFloat(sref1)*unidist1();
 
-        return (massa * ((ref1 / 2f) * (ref1 / 2f))) / 2;
+        return ((massa * ((ref1 / 2f) * (ref1 / 2f))) / 2f)* unitsresu();
     }
-
     private float calculaInerciaCilindredens() {
         String sdensitat = edit_densitat.getText().toString();
         float densitat = Float.parseFloat(sdensitat)*unidensi();
         String sref1 = edit_ref1.getText().toString();
-        float ref1 = Float.parseFloat(sref1);
+        float ref1 = Float.parseFloat(sref1)*unidist1();
         String sref2 = edit_ref2.getText().toString();
-        float ref2 = Float.parseFloat(sref2);
+        float ref2 = Float.parseFloat(sref2)*unidist2();
 
-        return (3.1416f * densitat * ref2 * ((ref1 / 2f) * (ref1 / 2f) * (ref1 / 2f) * (ref1 / 2f))) / 2f;
+        return ((3.1416f * densitat * ref2 * ((ref1 / 2f) * (ref1 / 2f) * (ref1 / 2f) * (ref1 / 2f))) / 2f)* unitsresu();
     }
 
     private float calculaInerciaCilindrebuitmassa() {
         String smassa = edit_massa.getText().toString();
-        float massa = Float.parseFloat(smassa);
+        float massa = Float.parseFloat(smassa)*unimassa();
         String sref1 = edit_ref1.getText().toString();
-        float ref1 = Float.parseFloat(sref1);
+        float ref1 = Float.parseFloat(sref1)*unidist1();
         String sref2 = edit_ref2.getText().toString();
-        float ref2 = Float.parseFloat(sref2);
+        float ref2 = Float.parseFloat(sref2)*unidist2();
 
-        return (massa * (((ref1 / 2f) * (ref1 / 2f)) + (((ref2 / 2f) * (ref2 / 2f))))) / 2f;
+        return ((massa * (((ref1 / 2f) * (ref1 / 2f)) + (((ref2 / 2f) * (ref2 / 2f))))) / 2f)* unitsresu();
 
     }
-
     private float calculaInerciaCilindrebuitdens() {
         String sdensitat = edit_densitat.getText().toString();
         float densitat = Float.parseFloat(sdensitat)*unidensi();
         String sref1 = edit_ref1.getText().toString();
-        float ref1 = Float.parseFloat(sref1);
+        float ref1 = Float.parseFloat(sref1)*unidist1();
         String sref2 = edit_ref2.getText().toString();
-        float ref2 = Float.parseFloat(sref2);
+        float ref2 = Float.parseFloat(sref2)*unidist2();
         String sref3 = edit_ref3.getText().toString();
-        float ref3 = Float.parseFloat(sref3);
+        float ref3 = Float.parseFloat(sref3)*unidist3();
 
-        return ((3.1416f * densitat * ref3) / 2) * (((ref1 / 2f) * (ref1 / 2f) * (ref1 / 2f) * (ref1 / 2f)) - ((ref2 / 2f) * (ref2 / 2f) * (ref2 / 2f) * (ref2 / 2f)));
+        return ((3.1416f * densitat * ref3) / 2) * (((ref1 / 2f) * (ref1 / 2f) * (ref1 / 2f) * (ref1 / 2f)) - ((ref2 / 2f) * (ref2 / 2f) * (ref2 / 2f) * (ref2 / 2f)))* unitsresu();
 
     }
 
     private float calculaInerciaConmassa() {
         String smassa = edit_massa.getText().toString();
-        float massa = Float.parseFloat(smassa);
+        float massa = Float.parseFloat(smassa)*unimassa();
         String sref1 = edit_ref1.getText().toString();
-        float ref1 = Float.parseFloat(sref1);
+        float ref1 = Float.parseFloat(sref1)*unidist1();
 
-        return (3f * massa * ((ref1 / 2) * (ref1 / 2))) / 10;
+        return ((3f * massa * ((ref1 / 2) * (ref1 / 2))) / 10)* unitsresu();
     }
-
     private float calculaInerciaCondens() {
         String sdensitat = edit_densitat.getText().toString();
         float densitat = Float.parseFloat(sdensitat)*unidensi();
         String sref1 = edit_ref1.getText().toString();
-        float ref1 = Float.parseFloat(sref1);
+        float ref1 = Float.parseFloat(sref1)*unidist1();
         String sref2 = edit_ref2.getText().toString();
-        float ref2 = Float.parseFloat(sref2);
+        float ref2 = Float.parseFloat(sref2)*unidist2();
         float massa = ((3.1416f * (ref1 * ref1) * ref2) / 12) * densitat;
 
-        return (3f * massa * ((ref1 / 2) * (ref1 / 2))) / 10;
+        return ((3f * massa * ((ref1 / 2) * (ref1 / 2))) / 10)* unitsresu();
     }
 
     private float calculaInerciaEsferamassa() {
         String smassa = edit_massa.getText().toString();
-        float massa = Float.parseFloat(smassa);
+        float massa = Float.parseFloat(smassa)*unimassa();
         String sref1 = edit_ref1.getText().toString();
-        float ref1 = Float.parseFloat(sref1);
+        float ref1 = Float.parseFloat(sref1)*unidist1();
 
-        return ((2 / 5) * massa * ((ref1 / 2f) * (ref1 / 2)));
+        return ((2 / 5) * massa * ((ref1 / 2f) * (ref1 / 2)))* unitsresu();
     }
-
     private float calculaInerciaEsferadens() {
         String sdensitat = edit_densitat.getText().toString();
         float densitat = Float.parseFloat(sdensitat)*unidensi();
         String sref1 = edit_ref1.getText().toString();
-        float ref1 = Float.parseFloat(sref1);
+        float ref1 = Float.parseFloat(sref1)*unidist1();
         float massa = (3.146f * ((ref1 / 2) * (ref1 / 2) * (ref1 / 2))) * densitat;
 
-        return ((2 / 5) * massa * ((ref1 / 2f) * (ref1 / 2)));
+        return ((2 / 5) * massa * ((ref1 / 2f) * (ref1 / 2)))* unitsresu();
 
     }
 
     private float calculaInerciaBasicmassa() {
         String smassa = edit_massa.getText().toString();
-        float massa = Float.parseFloat(smassa);
+        float massa = Float.parseFloat(smassa)*unimassa();
         String sref1 = edit_ref1.getText().toString();
-        float ref1 = Float.parseFloat(sref1);
+        float ref1 = Float.parseFloat(sref1)*unidist1();
 
-        return (massa * ref1);
+        return (massa * ref1)* unitsresu();
 
     }
 
     private float calculaInerciaCubMassa() {
         String smassa = edit_massa.getText().toString();
+        String sref1 = edit_ref1.getText().toString();
         String sref2 = edit_ref2.getText().toString();
-        String sref3 = edit_ref3.getText().toString();
-        float massa = Float.parseFloat(smassa);
-        float ref2 = Float.parseFloat(sref2);
-        float ref3 = Float.parseFloat(sref3);
-        return ((massa * ((ref2 * ref2) + (ref3 * ref3))) / 12000000) * unitsresu();
+        float massa = Float.parseFloat(smassa)*unimassa();
+        float ref1 = Float.parseFloat(sref1)*unidist1();
+        float ref2 = Float.parseFloat(sref2)*unidist2();
+        return ((massa * ((ref1 * ref2) + (ref2 * ref2))) / 12) * unitsresu();
     }
-
     private float calculaInerciaCubdens() {
         String sdensitat = edit_densitat.getText().toString();
         float densitat = Float.parseFloat(sdensitat)*unidensi();
         String sref1 = edit_ref1.getText().toString();
-        float ref1 = Float.parseFloat(sref1);
+        float ref1 = Float.parseFloat(sref1)*unidist1();
         String sref2 = edit_ref2.getText().toString();
         String sref3 = edit_ref3.getText().toString();
-        float ref2 = Float.parseFloat(sref2);
-        float ref3 = Float.parseFloat(sref3);
+        float ref2 = Float.parseFloat(sref2)*unidist2();
+        float ref3 = Float.parseFloat(sref3)*unidist3();
         float massa = ref2 * ref3 * ref1 * densitat;
-        return (massa * ((ref2 * ref2) + (ref3 * ref3))) / 12000000;
+        return ((massa * ((ref2 * ref2) + (ref3 * ref3))) / 12)* unitsresu();
     }
 
-
+    //CANVI D'UNITATS
     private float unitsresu() {
         String Textresultat = spinner_resulta.getSelectedItem().toString();
         float res = 0;
         if (Textresultat.equals("Kgm2")) {
             res = 1f;
         } else if (Textresultat.equals("Kgcm2")) {
-            res = 10000f;
+            res = 0.0001f;
         } else if (Textresultat.equals("ozin2")) {
-            res = 54674.8f;
+            res = 0.000018290f;
         } else if (Textresultat.equals("Lbin2")) {
-            res = 3417.17f;
+            res = 0.000292639f;
         } else if (Textresultat.equals("lbft2")) {
-            res = 23.7304f;
+            res = 0.0421401f;
         }
         return res;
     }
-
     private float unidensi() {
         String Textresultat = spinner_densita.getSelectedItem().toString();
         float res = 0;
         if (Textresultat.equals("Kg/m3")) {
             res = 1f;
         } else if (Textresultat.equals("Kg/cm3")) {
-            res = 0.000006f;
+            res = 1000000f;
         } else if (Textresultat.equals("oz/in3")) {
-            res = 0.0005780367f;
+            res = 1729.99f;
         } else if (Textresultat.equals("lb/in3")) {
-            res = 0.0000361273f;
+            res = 27679.9f;
         } else if (Textresultat.equals("lb/ft3")) {
-            res = 0.062428f;
+            res = 16.018463f;
+        }
+        return res;
+    }
+    private float unimassa() {
+        String Textresultat = spinner_mass.getSelectedItem().toString();
+        float res = 0;
+        if (Textresultat.equals("Kg")) {
+            res = 1f;
+        } else if (Textresultat.equals("g")) {
+            res = 0.001f;
+        } else if (Textresultat.equals("oz")) {
+            res = 0.0283495f;
+        } else if (Textresultat.equals("lb")) {
+            res = 0.453592f;
+        }
+        return res;
+    }
+    private float unidist1() {
+        String Textresultat = spinner_ref11.getSelectedItem().toString();
+        float res = 0;
+        if (Textresultat.equals("mm")) {
+            res = 0.001f;
+        } else if (Textresultat.equals("m")) {
+            res = 1f;
+        } else if (Textresultat.equals("in")) {
+            res = 0.0254f;
+        } else if (Textresultat.equals("ft")) {
+            res = 0.3048f;
+        }
+        return res;
+    }
+    private float unidist2() {
+        String Textresultat = spinner_ref22.getSelectedItem().toString();
+        float res = 0;
+        if (Textresultat.equals("mm")) {
+            res = 0.001f;
+        } else if (Textresultat.equals("m")) {
+            res = 1f;
+        } else if (Textresultat.equals("in")) {
+            res = 0.0254f;
+        } else if (Textresultat.equals("ft")) {
+            res = 0.3048f;
+        }
+        return res;
+    }
+    private float unidist3() {
+        String Textresultat = spinner_ref33.getSelectedItem().toString();
+        float res = 0;
+        if (Textresultat.equals("mm")) {
+            res = 0.001f;
+        } else if (Textresultat.equals("m")) {
+            res = 1f;
+        } else if (Textresultat.equals("in")) {
+            res = 0.0254f;
+        } else if (Textresultat.equals("ft")) {
+            res = 0.3048f;
         }
         return res;
     }
 
+
 }
-//String[] unidens = {"Kg/m3","Kg/cm3","oz/in3","lb/in3","lb/ft3"};

@@ -216,15 +216,6 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 
-    <ImageView
-        android:layout_width="150dp"
-        app:srcCompat="@mipmap/cono"
-        android:id="@+id/diagrama"
-        android:layout_height="150dp"
-        android:layout_below="@+id/resultat"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
     <EditText
         android:layout_height="wrap_content"
         android:inputType="numberDecimal"
@@ -236,5 +227,14 @@
         android:layout_toRightOf="@+id/im_ref2"
         android:layout_toEndOf="@+id/im_ref2"
         android:text="0" />
+
+    <ImageView
+        android:layout_width="150dp"
+        app:srcCompat="@mipmap/cono"
+        android:id="@+id/diagrama"
+        android:layout_height="150dp"
+        android:layout_below="@+id/resultat"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>
