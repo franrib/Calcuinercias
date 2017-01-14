@@ -70,22 +70,71 @@ public class CalculatorActivity extends AppCompatActivity {
                     switch (calcul){
                         case 0:
                             if (densi > 0){
-                            float inercia = calculaInerciaCubdens();
+                            float inercia = calculaInerciaCilindredens();
                             String sinercia = String.format("%f",inercia);
                             resultat.setText(sinercia);
                             }
                             if (mass > 0){
-                             float inercia = calculaInerciaCubMassa();
+                             float inercia = calculaInerciaCilindremassa();
                              String sinercia = String.format("%f",inercia);
                              resultat.setText(sinercia);
                             }
                         break;
-
-
-
-
-
-
+                        case 1:
+                            if (densi > 0){
+                                float inercia = calculaInerciaCilindrebuitdens();
+                                String sinercia = String.format("%f",inercia);
+                                resultat.setText(sinercia);
+                            }
+                            if (mass > 0){
+                                float inercia = calculaInerciaCilindrebuitmassa();
+                                String sinercia = String.format("%f",inercia);
+                                resultat.setText(sinercia);
+                            }
+                        break;
+                        case 2:
+                            if (densi > 0){
+                                float inercia = calculaInerciaCondens();
+                                String sinercia = String.format("%f",inercia);
+                                resultat.setText(sinercia);
+                            }
+                            if (mass > 0){
+                                float inercia = calculaInerciaConmassa();
+                                String sinercia = String.format("%f",inercia);
+                                resultat.setText(sinercia);
+                            }
+                        break;
+                        case 3:
+                            if (densi > 0){
+                                float inercia = calculaInerciaEsferadens();
+                                String sinercia = String.format("%f",inercia);
+                                resultat.setText(sinercia);
+                            }
+                            if (mass > 0){
+                                float inercia = calculaInerciaEsferamassa();
+                                String sinercia = String.format("%f",inercia);
+                                resultat.setText(sinercia);
+                            }
+                        break;
+                        case 4:
+                            if (mass > 0){
+                                float inercia = calculaInerciaBasicmassa();
+                                String sinercia = String.format("%f",inercia);
+                                resultat.setText(sinercia);
+                            }
+                        break;
+                        case 5:
+                            if (densi > 0){
+                                float inercia = calculaInerciaCubdens();
+                                String sinercia = String.format("%f",inercia);
+                                resultat.setText(sinercia);
+                            }
+                            if (mass > 0){
+                                float inercia = calculaInerciaCubMassa();
+                                String sinercia = String.format("%f",inercia);
+                                resultat.setText(sinercia);
+                            }
+                        break;
 
                     }
                 } catch (NumberFormatException e) {
@@ -97,7 +146,6 @@ public class CalculatorActivity extends AppCompatActivity {
 
 
         //ALTRES FORMULES
-
         //Selector d'unitats
         unitats_resultat = (Spinner)findViewById(R.id.spinner_resultat);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item,unires);
