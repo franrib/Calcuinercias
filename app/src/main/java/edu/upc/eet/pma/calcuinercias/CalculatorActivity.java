@@ -237,7 +237,7 @@ public class CalculatorActivity extends AppCompatActivity {
         String sref1 = edit_ref1.getText().toString();
         float ref1 = Float.parseFloat(sref1)*unidist1();
 
-        return ((3f * massa * ((ref1 / 2) * (ref1 / 2))) / 10)* unitsresu();
+        return ((3f * massa * ((ref1 / 2f) * (ref1 / 2f))) / 10f)* unitsresu();
     }
     private float calculaInerciaCondens() {
         String sdensitat = edit_densitat.getText().toString();
@@ -246,9 +246,9 @@ public class CalculatorActivity extends AppCompatActivity {
         float ref1 = Float.parseFloat(sref1)*unidist1();
         String sref2 = edit_ref2.getText().toString();
         float ref2 = Float.parseFloat(sref2)*unidist2();
-        float massa = ((3.1416f * (ref1 * ref1) * ref2) / 12) * densitat;
+        float massa = ((3.1416f * (ref1 * ref1) * ref2) / 12f) * densitat;
 
-        return ((3f * massa * ((ref1 / 2) * (ref1 / 2))) / 10)* unitsresu();
+        return ((3f * massa * ((ref1 / 2f) * (ref1 / 2f))) / 10f)* unitsresu();
     }
 
     private float calculaInerciaEsferamassa() {
@@ -257,16 +257,16 @@ public class CalculatorActivity extends AppCompatActivity {
         String sref1 = edit_ref1.getText().toString();
         float ref1 = Float.parseFloat(sref1)*unidist1();
 
-        return ((2 / 5) * massa * ((ref1 / 2f) * (ref1 / 2)))* unitsresu();
+        return ((2f / 5f) * massa * ((ref1 / 2f) * (ref1 / 2f)))* unitsresu();
     }
     private float calculaInerciaEsferadens() {
         String sdensitat = edit_densitat.getText().toString();
         float densitat = Float.parseFloat(sdensitat)*unidensi();
         String sref1 = edit_ref1.getText().toString();
         float ref1 = Float.parseFloat(sref1)*unidist1();
-        float massa = (3.146f * ((ref1 / 2) * (ref1 / 2) * (ref1 / 2))) * densitat;
+        float massa = ((3.1416f * (ref1*ref1*ref1))/6) * densitat;
 
-        return ((2 / 5) * massa * ((ref1 / 2f) * (ref1 / 2)))* unitsresu();
+        return ((2f / 5f) * massa * ((ref1 / 2f) * (ref1 / 2f)))* unitsresu();
 
     }
 
@@ -276,7 +276,7 @@ public class CalculatorActivity extends AppCompatActivity {
         String sref1 = edit_ref1.getText().toString();
         float ref1 = Float.parseFloat(sref1)*unidist1();
 
-        return (massa * ref1)* unitsresu();
+        return ((massa * ref1)/10f)* unitsresu();
 
     }
 
@@ -287,7 +287,7 @@ public class CalculatorActivity extends AppCompatActivity {
         float massa = Float.parseFloat(smassa)*unimassa();
         float ref1 = Float.parseFloat(sref1)*unidist1();
         float ref2 = Float.parseFloat(sref2)*unidist2();
-        return ((massa * ((ref1 * ref2) + (ref2 * ref2))) / 12) * unitsresu();
+        return ((massa * ((ref1 * ref2) + (ref2 * ref2))) / 12f) * unitsresu();
     }
     private float calculaInerciaCubdens() {
         String sdensitat = edit_densitat.getText().toString();
@@ -309,13 +309,13 @@ public class CalculatorActivity extends AppCompatActivity {
         if (Textresultat.equals("Kgm2")) {
             res = 1f;
         } else if (Textresultat.equals("Kgcm2")) {
-            res = 0.0001f;
+            res = 10000f;
         } else if (Textresultat.equals("ozin2")) {
-            res = 0.000018290f;
+            res = 54674.8f;
         } else if (Textresultat.equals("Lbin2")) {
-            res = 0.000292639f;
+            res = 3417.17f;
         } else if (Textresultat.equals("lbft2")) {
-            res = 0.0421401f;
+            res = 23.7304f;
         }
         return res;
     }
