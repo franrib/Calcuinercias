@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -50,6 +51,8 @@ public class CalculatorActivity extends AppCompatActivity {
 
 
         TextView titol_pagina = (TextView) findViewById(R.id.titol_pagina);
+
+
         Intent intent = getIntent();
         if (intent != null) {
             String titol_pag = intent.getStringExtra("tit_pag");
@@ -72,10 +75,35 @@ public class CalculatorActivity extends AppCompatActivity {
         spinner_ref11 = (Spinner) findViewById(R.id.spinner_ref1);
         spinner_ref22 = (Spinner) findViewById(R.id.spinner_ref2);
         spinner_ref33 = (Spinner) findViewById(R.id.spinner_ref3);
+        final ImageView diagrama=(ImageView)findViewById(R.id.diagrama);
 
+
+        //Selector del diagrama corresponent en funció del cas a calcular
+        switch (calcul){
+            case 0:
+                diagrama.setImageResource(R.mipmap.dia_cilinder);
+                break;
+            case 1:
+                diagrama.setImageResource(R.mipmap.dia_cil_buit);
+                break;
+            case 2:
+                diagrama.setImageResource(R.mipmap.dia_cono);
+                break;
+            case 3:
+                diagrama.setImageResource(R.mipmap.dia_bola);
+                break;
+            case 4:
+                diagrama.setImageResource(R.mipmap.dia_basic);
+                break;
+            case 5:
+                diagrama.setImageResource(R.mipmap.dia_cub);
+                break;
+
+        }
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
+
             public void onClick(View view) {
                 try {
                     String smassa = edit_massa.getText().toString();
@@ -86,6 +114,7 @@ public class CalculatorActivity extends AppCompatActivity {
 
                     switch (calcul) {
                         case 0:
+
                             if (densi > 0) {
                                 float inercia = calculaInerciaCilindredens();
                                 String sinercia = String.format("%f", inercia);
@@ -98,6 +127,7 @@ public class CalculatorActivity extends AppCompatActivity {
                             }
                             break;
                         case 1:
+
                             if (densi > 0) {
                                 float inercia = calculaInerciaCilindrebuitdens();
                                 String sinercia = String.format("%f", inercia);
@@ -110,6 +140,7 @@ public class CalculatorActivity extends AppCompatActivity {
                             }
                             break;
                         case 2:
+
                             if (densi > 0) {
                                 float inercia = calculaInerciaCondens();
                                 String sinercia = String.format("%f", inercia);
@@ -122,6 +153,7 @@ public class CalculatorActivity extends AppCompatActivity {
                             }
                             break;
                         case 3:
+
                             if (densi > 0) {
                                 float inercia = calculaInerciaEsferadens();
                                 String sinercia = String.format("%f", inercia);
@@ -134,6 +166,7 @@ public class CalculatorActivity extends AppCompatActivity {
                             }
                             break;
                         case 4:
+
                             if (mass > 0) {
                                 float inercia = calculaInerciaBasicmassa();
                                 String sinercia = String.format("%f", inercia);
@@ -141,6 +174,7 @@ public class CalculatorActivity extends AppCompatActivity {
                             }
                             break;
                         case 5:
+
                             if (densi > 0) {
                                 float inercia = calculaInerciaCubdens();
                                 String sinercia = String.format("%f", inercia);
