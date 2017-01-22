@@ -85,7 +85,7 @@ public class CalculatorActivity extends AppCompatActivity {
         final TextView titol_ref3=(TextView) findViewById(R.id.titol_ref3);
 
 
-        //Selector del diagrama corresponent en funció del cas a calcular
+        //SAdaptació del layout en funció del cas a calcular
         switch (calcul){
             case 0:
                 diagrama.setImageResource(R.mipmap.dia_cilinder);
