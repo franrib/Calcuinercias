@@ -5,6 +5,10 @@
     <string name="Height">Height</string>
     <string name="Width">Width</string>
     <string name="Density">Density</string>
+    <string name="Distance">Distance</string>
+    <string name="Radius">Radius</string>
+    <string name="Radius_ext">Radius ext</string>
+    <string name="Radius_in">Radius int</string>
 
 
     <array name="all_titles">

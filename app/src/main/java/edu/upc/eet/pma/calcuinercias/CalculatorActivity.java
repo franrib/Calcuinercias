@@ -75,25 +75,64 @@ public class CalculatorActivity extends AppCompatActivity {
         spinner_ref11 = (Spinner) findViewById(R.id.spinner_ref1);
         spinner_ref22 = (Spinner) findViewById(R.id.spinner_ref2);
         spinner_ref33 = (Spinner) findViewById(R.id.spinner_ref3);
+
         final ImageView diagrama=(ImageView)findViewById(R.id.diagrama);
+        final ImageView im_ref1=(ImageView)findViewById(R.id.im_ref1);
+        final ImageView im_ref2=(ImageView)findViewById(R.id.im_ref2);
+        final ImageView im_ref3=(ImageView)findViewById(R.id.im_ref3);
+        final TextView titol_ref1=(TextView) findViewById(R.id.titol_ref1);
+        final TextView titol_ref2=(TextView) findViewById(R.id.titol_ref2);
+        final TextView titol_ref3=(TextView) findViewById(R.id.titol_ref3);
 
 
         //Selector del diagrama corresponent en funció del cas a calcular
         switch (calcul){
             case 0:
                 diagrama.setImageResource(R.mipmap.dia_cilinder);
+                edit_ref3.setVisibility(View.INVISIBLE);
+                spinner_ref33.setVisibility(View.INVISIBLE);
+                im_ref3.setVisibility(View.INVISIBLE);
+                titol_ref3.setVisibility(View.INVISIBLE);
+                titol_ref1.setText(R.string.Radius);
+                titol_ref2.setText(R.string.Length);
                 break;
             case 1:
                 diagrama.setImageResource(R.mipmap.dia_cil_buit);
+                titol_ref1.setText(R.string.Radius_ext);
+                titol_ref2.setText(R.string.Radius_in);
+                titol_ref3.setText(R.string.Length);
                 break;
             case 2:
                 diagrama.setImageResource(R.mipmap.dia_cono);
+                edit_ref3.setVisibility(View.INVISIBLE);
+                spinner_ref33.setVisibility(View.INVISIBLE);
+                im_ref3.setVisibility(View.INVISIBLE);
+                titol_ref3.setVisibility(View.INVISIBLE);
+                titol_ref1.setText(R.string.Radius);
                 break;
             case 3:
                 diagrama.setImageResource(R.mipmap.dia_bola);
+                edit_ref3.setVisibility(View.INVISIBLE);
+                spinner_ref33.setVisibility(View.INVISIBLE);
+                im_ref3.setVisibility(View.INVISIBLE);
+                titol_ref3.setVisibility(View.INVISIBLE);
+                edit_ref2.setVisibility(View.INVISIBLE);
+                spinner_ref22.setVisibility(View.INVISIBLE);
+                im_ref2.setVisibility(View.INVISIBLE);
+                titol_ref2.setVisibility(View.INVISIBLE);
+                titol_ref1.setText(R.string.Radius);
                 break;
             case 4:
                 diagrama.setImageResource(R.mipmap.dia_basic);
+                edit_ref3.setVisibility(View.INVISIBLE);
+                spinner_ref33.setVisibility(View.INVISIBLE);
+                im_ref3.setVisibility(View.INVISIBLE);
+                titol_ref3.setVisibility(View.INVISIBLE);
+                edit_ref2.setVisibility(View.INVISIBLE);
+                spinner_ref22.setVisibility(View.INVISIBLE);
+                im_ref2.setVisibility(View.INVISIBLE);
+                titol_ref2.setVisibility(View.INVISIBLE);
+                titol_ref1.setText(R.string.Distance);
                 break;
             case 5:
                 diagrama.setImageResource(R.mipmap.dia_cub);
