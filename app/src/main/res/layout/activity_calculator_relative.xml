@@ -9,6 +9,7 @@
     android:columnCount="8"
     android:rowCount="14"
     android:padding="10dp"
+    android:screenOrientation="portrait"
     >
 
 

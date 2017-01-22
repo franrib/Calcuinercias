@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     android:columnCount="2"
     android:rowCount="3"
-    android:padding="10dp">
+    android:padding="10dp"
+    android:screenOrientation="portrait">
 
     <ImageButton
         android:text="Button"
