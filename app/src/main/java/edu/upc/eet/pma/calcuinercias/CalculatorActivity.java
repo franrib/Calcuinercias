@@ -89,9 +89,8 @@ public class CalculatorActivity extends AppCompatActivity {
         switch (calcul){
             case 0:
                 diagrama.setImageResource(R.mipmap.dia_cilinder);
-                im_ref1.setImageResource(R.mipmap.dia_cilinder);
-                im_ref2.setImageResource(R.mipmap.dia_cilinder);
-                im_ref3.setImageResource(R.mipmap.dia_cilinder);
+                im_ref1.setImageResource(R.mipmap.cil_radi);
+                im_ref2.setImageResource(R.mipmap.cil_llargada);
                 edit_ref3.setVisibility(View.INVISIBLE);
                 spinner_ref33.setVisibility(View.INVISIBLE);
                 im_ref3.setVisibility(View.INVISIBLE);
@@ -101,29 +100,27 @@ public class CalculatorActivity extends AppCompatActivity {
                 break;
             case 1:
                 diagrama.setImageResource(R.mipmap.dia_cil_buit);
-                im_ref1.setImageResource(R.mipmap.dia_cil_buit);
-                im_ref2.setImageResource(R.mipmap.dia_cil_buit);
-                im_ref3.setImageResource(R.mipmap.dia_cil_buit);
+                im_ref1.setImageResource(R.mipmap.cil_buit_rext);
+                im_ref2.setImageResource(R.mipmap.cil_buit_rint);
+                im_ref3.setImageResource(R.mipmap.cil_buit_long);
                 titol_ref1.setText(R.string.Radius_ext);
                 titol_ref2.setText(R.string.Radius_in);
                 titol_ref3.setText(R.string.Length);
                 break;
             case 2:
                 diagrama.setImageResource(R.mipmap.dia_cono);
-                im_ref1.setImageResource(R.mipmap.dia_cono);
-                im_ref2.setImageResource(R.mipmap.dia_cono);
-                im_ref3.setImageResource(R.mipmap.dia_cono);
+                im_ref1.setImageResource(R.mipmap.radi_general);
+                im_ref2.setImageResource(R.mipmap.con_altura);
                 edit_ref3.setVisibility(View.INVISIBLE);
                 spinner_ref33.setVisibility(View.INVISIBLE);
                 im_ref3.setVisibility(View.INVISIBLE);
                 titol_ref3.setVisibility(View.INVISIBLE);
                 titol_ref1.setText(R.string.Radius);
+                titol_ref2.setText(R.string.Height);
                 break;
             case 3:
                 diagrama.setImageResource(R.mipmap.dia_bola);
-                im_ref1.setImageResource(R.mipmap.dia_bola);
-                im_ref2.setImageResource(R.mipmap.dia_bola);
-                im_ref3.setImageResource(R.mipmap.dia_bola);
+                im_ref1.setImageResource(R.mipmap.radi_general);
                 edit_ref3.setVisibility(View.INVISIBLE);
                 spinner_ref33.setVisibility(View.INVISIBLE);
                 im_ref3.setVisibility(View.INVISIBLE);
@@ -136,9 +133,7 @@ public class CalculatorActivity extends AppCompatActivity {
                 break;
             case 4:
                 diagrama.setImageResource(R.mipmap.dia_basic);
-                im_ref1.setImageResource(R.mipmap.dia_basic);
-                im_ref2.setImageResource(R.mipmap.dia_basic);
-                im_ref3.setImageResource(R.mipmap.dia_basic);
+                im_ref1.setImageResource(R.mipmap.basic_llarg);
                 edit_ref3.setVisibility(View.INVISIBLE);
                 spinner_ref33.setVisibility(View.INVISIBLE);
                 im_ref3.setVisibility(View.INVISIBLE);
@@ -151,9 +146,9 @@ public class CalculatorActivity extends AppCompatActivity {
                 break;
             case 5:
                 diagrama.setImageResource(R.mipmap.dia_cub);
-                im_ref1.setImageResource(R.mipmap.dia_cub);
-                im_ref2.setImageResource(R.mipmap.dia_cub);
-                im_ref3.setImageResource(R.mipmap.dia_cub);
+                im_ref1.setImageResource(R.mipmap.cub_lat1);
+                im_ref2.setImageResource(R.mipmap.cub_lat2);
+                im_ref3.setImageResource(R.mipmap.cub_altura);
                 break;
 
         }
