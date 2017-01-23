@@ -9,6 +9,8 @@
     <string name="Radius">Radius</string>
     <string name="Radius_ext">Radius ext</string>
     <string name="Radius_in">Radius int</string>
+    <string name="Language">Language</string>
+    <string name="units_settings">Units Settings</string>
 
 
     <array name="all_titles">
